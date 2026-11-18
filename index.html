@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ARC-NOVA transforms interior design references and drawings into three-dimensional visualizations for architects and interior designers in Bengaluru.">
+<meta name="theme-color" content="#101c25">
+<title>ARC-NOVA | 3D Interior Visualization</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#101c25;--panel:#172832;--panel2:#1d3039;--text:#f4f2ec;--muted:#b6c1c1;--teal:#75b9ad;--gold:#d5b47a;--line:rgba(255,255,255,.12);--cream:#f4f1e9}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"DM Sans",sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}button{font:inherit}.container{width:min(1160px,calc(100% - 44px));margin:auto}.eyebrow{color:var(--gold);font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700}.section{padding:100px 0}.section h2{font:800 clamp(2rem,4vw,3.3rem)/1.1 Manrope,sans-serif;letter-spacing:-.04em;margin:12px 0 18px}.intro{color:var(--muted);max-width:690px;font-size:1.05rem}.nav{position:sticky;top:0;z-index:20;background:rgba(16,28,37,.88);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.nav-inner{height:76px;display:flex;align-items:center;justify-content:space-between}.brand{font:800 1.25rem Manrope,sans-serif;letter-spacing:.12em}.brand span{color:var(--gold)}.navlinks{display:flex;gap:26px;align-items:center;color:#d5dddd;font-size:.88rem}.navlinks a:hover{color:var(--teal)}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:12px 20px;font-weight:700;font-size:.9rem;transition:.2s}.nav-cta,.btn-primary{background:var(--teal);color:#102128}.btn:hover,.nav-cta:hover{transform:translateY(-2px);filter:brightness(1.07)}.btn-secondary{border:1px solid rgba(255,255,255,.3);color:var(--text)}.menu-btn{display:none;background:none;border:1px solid var(--line);color:white;border-radius:10px;padding:8px 12px}.hero{padding:86px 0 88px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 75% 45%,rgba(80,143,133,.22),transparent 38%),linear-gradient(120deg,#101c25 35%,#172b34)}.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}.hero h1{font:800 clamp(2.8rem,6vw,5.3rem)/1.02 Manrope,sans-serif;letter-spacing:-.065em;margin:18px 0 22px}.hero h1 em{font-style:normal;color:var(--teal)}.hero p{color:var(--muted);font-size:1.08rem;max-width:570px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.hero-visual{position:relative}
+.hero-logo-panel{height:480px;border-radius:20px;border:1px solid rgba(213,180,122,.32);background:linear-gradient(145deg,#071329,#061126);display:flex;align-items:center;justify-content:center;padding:42px;box-shadow:0 30px 80px rgba(0,0,0,.35);overflow:hidden;position:relative}
+.hero-logo-panel:before,.hero-logo-panel:after{content:"";position:absolute;border:1px solid rgba(213,180,122,.13);border-radius:50%;width:420px;height:420px}
+.hero-logo-panel:after{width:520px;height:520px}
+.hero-logo-panel img{width:100%;height:100%;max-height:100%;object-fit:contain;position:relative;z-index:1}
+.hero-logo-caption{position:absolute;bottom:18px;left:18px;right:18px;text-align:center;color:#b6c1c1;font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;z-index:2}
+.visual-tag{position:absolute;bottom:18px;left:18px;background:rgba(16,28,37,.86);border:1px solid var(--line);padding:10px 14px;border-radius:12px;font-size:.8rem;color:#e9efeb}.stats{display:flex;gap:32px;margin-top:38px}.stat strong{display:block;color:var(--gold);font:700 1.2rem Manrope}.stat span{font-size:.78rem;color:var(--muted)}.about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px;align-items:start}.about-note{border-left:2px solid var(--gold);padding:8px 0 8px 22px;color:var(--muted)}.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:38px}.service-card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:26px;min-height:210px}.service-card .num{color:var(--gold);font:700 .85rem Manrope}.service-card h3{font:700 1.15rem Manrope;margin:14px 0 8px}.service-card p{color:var(--muted);font-size:.92rem;margin:0}.work-section{background:#f1eee6;color:#18272d}.work-section .eyebrow{color:#927344}.work-section .intro{color:#617075}.filters{display:flex;gap:9px;flex-wrap:wrap;margin:30px 0}.filter{border:1px solid #cbd1cb;background:transparent;color:#31444a;border-radius:999px;padding:8px 15px;cursor:pointer;font-size:.85rem}.filter.active,.filter:hover{background:#18333b;color:white;border-color:#18333b}.work-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}.work-card{background:white;border:1px solid #dfe2dc;border-radius:17px;overflow:hidden;box-shadow:0 10px 30px rgba(28,45,45,.06)}.work-head{padding:18px 20px 12px;display:flex;justify-content:space-between;align-items:center;gap:12px}.work-head h3{font:700 1.05rem Manrope;margin:0}.work-head span{font-size:.72rem;color:#657477;background:#eff2ed;padding:5px 9px;border-radius:99px}.pair{display:grid;grid-template-columns:1fr 1fr;gap:3px;background:#e7e9e2}.pair figure{margin:0;position:relative;background:#d9ded9;overflow:hidden;aspect-ratio:1.13}.pair img{width:100%;height:100%;object-fit:cover;display:block;cursor:zoom-in;transition:transform .35s}.pair img:hover{transform:scale(1.035)}.pair figcaption{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.75));color:white;padding:22px 10px 9px;font-size:.72rem;font-weight:700}.work-foot{padding:12px 20px 17px;color:#6a7778;font-size:.78rem}.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:38px}.step{border-top:1px solid var(--gold);padding:20px 10px 0 0}.step b{font:800 1.8rem Manrope;color:var(--gold)}.step h3{font:700 1rem Manrope;margin:12px 0 7px}.step p{color:var(--muted);font-size:.88rem}.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:35px}.why{background:var(--panel);padding:23px;border:1px solid var(--line);border-radius:15px}.why h3{font:700 1rem Manrope}.why p{font-size:.88rem;color:var(--muted);margin-bottom:0}.contact{background:linear-gradient(120deg,#19343c,#14252f);border-top:1px solid var(--line)}.contact-box{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}.contact h2{margin-bottom:12px}.contact p{color:var(--muted);max-width:650px}.contact-actions{display:flex;gap:10px;flex-wrap:wrap}.footer{padding:28px 0;color:#8fa0a0;font-size:.8rem}.footer-inner{display:flex;justify-content:space-between;gap:20px;align-items:center}.modal{position:fixed;inset:0;background:rgba(4,10,13,.9);z-index:50;display:none;align-items:center;justify-content:center;padding:25px}.modal.open{display:flex}.modal img{max-width:min(1100px,95vw);max-height:88vh;object-fit:contain;border-radius:10px}.modal button{position:absolute;top:20px;right:25px;background:#fff;color:#102128;border:0;border-radius:50%;width:42px;height:42px;font-size:1.4rem;cursor:pointer}.notice{font-size:.78rem;color:#77888a;margin-top:20px}.mobile-menu{display:none}
+@media(max-width:850px){.hero-grid,.about-grid,.contact-box{grid-template-columns:1fr}.hero-visual img{height:370px}.navlinks{display:none}.menu-btn{display:block}.mobile-menu.show{display:flex;flex-direction:column;gap:14px;padding:0 0 18px;color:#d5dddd}.process-grid{grid-template-columns:repeat(2,1fr)}.why-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:580px){.container{width:min(100% - 30px,1160px)}.section{padding:72px 0}.hero{padding:62px 0}.hero h1{font-size:3rem}.hero-logo-panel{height:330px;padding:24px}.hero-logo-panel:before{width:300px;height:300px}.hero-logo-panel:after{width:370px;height:370px}.stats{gap:18px}.cards,.work-grid{grid-template-columns:1fr}.pair figure{aspect-ratio:1.05}.process-grid,.why-grid{grid-template-columns:1fr 1fr}.footer-inner{align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="#home">ARC<span>–</span>NOVA</a>
+    <nav class="navlinks" aria-label="Main navigation">
+      <a href="#about">About</a><a href="#services">Services</a><a href="#work">Our Work</a><a href="#process">How It Works</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="#contact">Discuss a Project</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+  </div>
+  <nav class="mobile-menu container" id="mobileMenu">
+    <a href="#about">About</a><a href="#services">Services</a><a href="#work">Our Work</a><a href="#process">How It Works</a><a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">3D interior visualization · Bengaluru</div>
+      <h1>From design concepts to <em>3D experiences.</em></h1>
+      <p>ARC-NOVA transforms interior design references, concepts and drawings into three-dimensional visualizations—helping architects and interior designers communicate their ideas more clearly.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#work">Explore Our Work</a>
+        <a class="btn btn-secondary" href="#contact">Discuss Your Project</a>
+      </div>
+      <div class="stats"><div class="stat"><strong>Reference-led</strong><span>Design recreation</span></div><div class="stat"><strong>Interactive</strong><span>3D walkthroughs</span></div></div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-logo-panel">
+        <img src="assets/arc-nova-logo.png" alt="ARC-NOVA architectural visualization studio logo">
+        <div class="hero-logo-caption">3D Interior Visualization Studio</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="container about-grid">
+    <div><div class="eyebrow">Who we are</div><h2>Design ideas, made easier to visualize.</h2></div>
+    <div>
+      <p class="intro">ARC-NOVA is an emerging 3D visualization studio focused on transforming interior design concepts and visual references into three-dimensional environments.</p>
+      <p class="about-note">We aim to support architects and interior designers by converting design ideas into visual 3D representations that make spaces easier to understand, explore and present.</p>
+      <p>Our approach combines creativity and technology to bridge the gap between traditional design references and three-dimensional visualization.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="services" style="background:#13232c">
+  <div class="container">
+    <div class="eyebrow">What we offer</div><h2>Visualization services for design professionals.</h2>
+    <p class="intro">Project-based 3D support shaped around the drawings, references and requirements you provide.</p>
+    <div class="cards">
+      <article class="service-card"><div class="num">01 / CONVERSION</div><h3>2D-to-3D Conversion</h3><p>Transform supplied interior drawings, layouts and visual references into three-dimensional representations.</p></article>
+      <article class="service-card"><div class="num">02 / INTERIORS</div><h3>Interior 3D Visualization</h3><p>Recreate interior elements such as wardrobes, TV units, study areas, bedrooms, living rooms and ceiling concepts in 3D.</p></article>
+      <article class="service-card"><div class="num">03 / WALKTHROUGH</div><h3>3D Walkthrough Preview</h3><p>Explore a prepared 3D environment through a navigable walkthrough and view the proposed space from different viewpoints.</p></article>
+      <article class="service-card"><div class="num">04 / INTERACTION</div><h3>Interactive Furniture Arrangement</h3><p>Use supported drag-and-drop controls to move and arrange selected furniture and interior elements in the 3D environment.</p></article>
+    </div>
+    <p class="notice">Feature availability and project scope are confirmed before work begins. VR headset-based presentation is a future development and is not offered as a current service.</p>
+  </div>
+</section>
+
+<section class="section work-section" id="work">
+  <div class="container">
+    <div class="eyebrow">Selected 3D visualizations</div><h2>From reference to 3D recreation.</h2>
+    <p class="intro">A look at how selected interior references have been recreated as 3D environments. Reference images are shown for comparison; these are demonstrations, not completed client projects.</p>
+    <div class="filters" id="filters"></div>
+    <div class="work-grid" id="workGrid"></div>
+    <p class="notice">Reference photographs are included for demonstration and comparison. Before commercial publication, replace any third-party reference image that you do not have permission to use with licensed or client-provided material.</p>
+  </div>
+</section>
+
+<section class="section" id="process">
+  <div class="container">
+    <div class="eyebrow">A clear project workflow</div><h2>From your design to a 3D presentation.</h2>
+    <p class="intro">A simple, collaborative process designed around the information and scope agreed for each project.</p>
+    <div class="process-grid">
+      <article class="step"><b>01</b><h3>Share your design</h3><p>Provide drawings, dimensions, photographs, visual references and design requirements.</p></article>
+      <article class="step"><b>02</b><h3>Review the references</h3><p>We review the supplied information, room details, furniture arrangements and visual preferences.</p></article>
+      <article class="step"><b>03</b><h3>Develop the 3D model</h3><p>We prepare the agreed 3D representation based on the supplied information and project scope.</p></article>
+      <article class="step"><b>04</b><h3>Present and explore</h3><p>We present the prepared environment through the agreed 3D visualization or walkthrough format.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:#13232c">
+  <div class="container">
+    <div class="eyebrow">Why ARC-NOVA</div><h2>A clearer way to communicate design ideas.</h2>
+    <div class="why-grid">
+      <article class="why"><h3>Better visualization</h3><p>Help clients understand proposed interior concepts in three dimensions.</p></article>
+      <article class="why"><h3>Reference-led development</h3><p>Build visualizations around the design references and requirements provided.</p></article>
+      <article class="why"><h3>Project-based support</h3><p>Discuss each assignment directly and agree on its scope before work begins.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="container contact-box">
+    <div><div class="eyebrow">Start a conversation</div><h2>Have a design in mind?</h2><p>Tell us about your interior visualization requirements. ARC-NOVA works with architects and interior designers on a project basis, with quotations shaped around the scope and complexity of each assignment.</p></div>
+    <div class="contact-actions">
+      <a class="btn btn-primary" href="https://wa.me/917090162525?text=Hello%20ARC-NOVA%2C%20I%27d%20like%20to%20discuss%20a%203D%20visualization%20project." target="_blank" rel="noopener">WhatsApp Us ↗</a>
+      <a class="btn btn-secondary" href="tel:+917090162525">Call 7090 162525</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer"><div class="container footer-inner"><div><strong>ARC-NOVA</strong> · 3D Interior Visualization</div><div>Bengaluru, Karnataka, India · © <span id="year"></span> ARC-NOVA</div></div></footer>
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Expanded portfolio image"><button id="closeModal" aria-label="Close">×</button><img id="modalImage" alt="Expanded portfolio image"></div>
+<script>
+const projects = [
+  {category:"Bathroom",title:"Vanity & shower",ref:"assets/bathroom-reference.jpg",model:"assets/bathroom-3d.jpg"},
+  {category:"Bedroom",title:"Wood ceiling & bed",ref:"assets/bedroom-wood-reference.jpg",model:"assets/bedroom-wood-3d.jpg"},
+  {category:"Bedroom",title:"Feature wall & bed",ref:"assets/bedroom-feature-reference.jpg",model:"assets/bedroom-feature-3d.jpg"},
+  {category:"False ceiling",title:"Layered ceiling design",ref:"assets/false-ceiling-reference.jpg",model:"assets/false-ceiling-3d.jpg"},
+  {category:"TV unit",title:"Slatted media wall",ref:"assets/tv-unit-reference.jpg",model:"assets/tv-unit-3d.jpg"},
+  {category:"Living room",title:"TV wall & shelving",ref:"assets/living-room-reference.jpg",model:"assets/living-room-3d.jpg"},
+  {category:"Study area",title:"Desk & storage",ref:"assets/study-area-reference.jpg",model:"assets/study-area-3d.jpg"},
+  {category:"Wardrobe",title:"Dressing unit",ref:"assets/wardrobe-reference.jpg",model:"assets/wardrobe-3d.jpg"}
+];
+const filters=document.getElementById('filters'), grid=document.getElementById('workGrid');
+const categories=["All",...new Set(projects.map(p=>p.category))];
+let active="All";
+function renderFilters(){filters.innerHTML=categories.map(c=>`<button class="filter ${c===active?'active':''}" data-filter="${c}">${c}</button>`).join('');}
+function renderProjects(){const shown=active==="All"?projects:projects.filter(p=>p.category===active);grid.innerHTML=shown.map(p=>`
+<article class="work-card">
+  <div class="work-head"><h3>${p.title}</h3><span>${p.category}</span></div>
+  <div class="pair">
+    <figure><img loading="lazy" src="${p.ref}" alt="${p.category} reference image" data-full="${p.ref}"><figcaption>REFERENCE IMAGE</figcaption></figure>
+    <figure><img loading="lazy" src="${p.model}" alt="ARC-NOVA 3D ${p.category} recreation" data-full="${p.model}"><figcaption>ARC-NOVA 3D RECREATION</figcaption></figure>
+  </div>
+  <div class="work-foot">Reference-to-3D recreation · Demonstration work</div>
+</article>`).join('');}
+filters.addEventListener('click',e=>{const b=e.target.closest('button[data-filter]');if(!b)return;active=b.dataset.filter;renderFilters();renderProjects();});
+grid.addEventListener('click',e=>{const img=e.target.closest('img[data-full]');if(!img)return;document.getElementById('modalImage').src=img.dataset.full;document.getElementById('modal').classList.add('open');});
+function closeModal(){document.getElementById('modal').classList.remove('open');}
+document.getElementById('closeModal').addEventListener('click',closeModal);
+document.getElementById('modal').addEventListener('click',e=>{if(e.target.id==='modal')closeModal();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+document.getElementById('menuBtn').addEventListener('click',()=>document.getElementById('mobileMenu').classList.toggle('show'));
+document.querySelectorAll('#mobileMenu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('mobileMenu').classList.remove('show')));
+document.getElementById('year').textContent=new Date().getFullYear();
+renderFilters();renderProjects();
+</script>
+</body></html>

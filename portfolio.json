@@ -1,0 +1,58 @@
+[
+  {
+    "slug": "bathroom",
+    "category": "Bathroom",
+    "title": "Vanity & shower",
+    "reference": "assets/bathroom-reference.jpg",
+    "model": "assets/bathroom-3d.jpg"
+  },
+  {
+    "slug": "bedroom-wood",
+    "category": "Bedroom",
+    "title": "Wood ceiling & bed",
+    "reference": "assets/bedroom-wood-reference.jpg",
+    "model": "assets/bedroom-wood-3d.jpg"
+  },
+  {
+    "slug": "bedroom-feature",
+    "category": "Bedroom",
+    "title": "Feature wall & bed",
+    "reference": "assets/bedroom-feature-reference.jpg",
+    "model": "assets/bedroom-feature-3d.jpg"
+  },
+  {
+    "slug": "false-ceiling",
+    "category": "False ceiling",
+    "title": "Layered ceiling design",
+    "reference": "assets/false-ceiling-reference.jpg",
+    "model": "assets/false-ceiling-3d.jpg"
+  },
+  {
+    "slug": "tv-unit",
+    "category": "TV unit",
+    "title": "Slatted media wall",
+    "reference": "assets/tv-unit-reference.jpg",
+    "model": "assets/tv-unit-3d.jpg"
+  },
+  {
+    "slug": "living-room",
+    "category": "Living room",
+    "title": "TV wall & shelving",
+    "reference": "assets/living-room-reference.jpg",
+    "model": "assets/living-room-3d.jpg"
+  },
+  {
+    "slug": "study-area",
+    "category": "Study area",
+    "title": "Desk & storage",
+    "reference": "assets/study-area-reference.jpg",
+    "model": "assets/study-area-3d.jpg"
+  },
+  {
+    "slug": "wardrobe",
+    "category": "Wardrobe",
+    "title": "Dressing unit",
+    "reference": "assets/wardrobe-reference.jpg",
+    "model": "assets/wardrobe-3d.jpg"
+  }
+]
